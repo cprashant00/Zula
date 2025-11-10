@@ -1,0 +1,143 @@
+/* Footer Container - Full width */
+.footer-container {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 3rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Main content area with max-width */
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Grid layout for footer columns */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Responsive grid for larger screens */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer-content {
+    padding: 0 2rem;
+  }
+}
+
+/* Footer column styles */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #374151;
+}
+
+/* Bottom section with copyright */
+.footer-bottom {
+  width: 100%;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.brand-text {
+  font-size: 1rem;
+}
+
+.copyright {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Mobile bottom bar */
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-bottom-bar {
+    display: block;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .mobile-indicator {
+    width: 100%;
+    background-color: #d1d5db;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    margin: 0 auto;
+  }
+}
+
+/* Social icons container */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}

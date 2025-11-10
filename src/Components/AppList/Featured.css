@@ -1,0 +1,110 @@
+/* src/components/AppList/Featured.css */
+
+/* --- Grid Container --- */
+.Featured-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap : 20px;
+  align-items: center;
+}
+
+.featured-grid {
+    display: grid;
+    /* Sets up a 4-column grid for the featured cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    width: 40%;
+}ß
+
+.Feature-image-grid{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.Feature-image-wrapper{
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  height: 564px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* --- Featured Card (Vertical Stack) --- */
+.featured-card {
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers logo/text horizontally */
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.featured-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px; 
+    object-fit: cover;
+    margin-bottom: 15px;
+    /* Ensures the logo doesn't become blurry if scaled */
+    flex-shrink: 0; 
+}
+
+/* Details Section */
+.featured-details {
+    margin-bottom: 15px;
+    width: 100%; 
+}
+
+.featured-name {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.featured-developer {
+    font-size: 0.85em;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+/* Rating */
+.featured-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #6b7280;
+}
+
+.featured-rating .stars {
+    color: #ffc107; 
+    margin-right: 4px;
+}
+
+/* Button */
+.featured-get-btn {
+    /* Reuses .auth-btn and .auth-register for consistent look */
+    margin-top: auto; /* Pushes the button to the bottom */
+    width: 100%; /* Makes the button fill the card width */
+}

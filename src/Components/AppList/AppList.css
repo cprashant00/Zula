@@ -1,0 +1,346 @@
+/* AppList.css */
+.app-list-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #fafbfd;
+}
+
+.app-list {
+  width: 1350px;
+  padding: 20px 0;
+}
+
+.app-section {
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.see-all {
+  color: #0070c9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HotApps Specific Styles */
+.apps-vertical-list {
+  display: flex;
+  gap: 20px;
+}
+
+.app-vertical-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.availability-tag {
+  background: #0070c9;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.availability-tag.now-available {
+  background: #4cd964;
+}
+
+.app-content {
+  display: flex;
+  gap: 15px;
+}
+
+.app-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.app-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-details {
+  flex: 1;
+}
+
+.app-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #333;
+}
+
+.app-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.app-meta {
+  margin-bottom: 12px;
+}
+
+.app-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.app-developer {
+  font-size: 12px;
+  color: #666;
+}
+
+.app-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.install-btn {
+  background: #0070c9;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.install-btn:hover {
+  background: #005bb7;
+}
+
+.purchase-info {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Grid layout for other sections */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.app-card {
+  /* background: #fff; */
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: center;
+  transition: transform 0.2s;
+  /* border: 1px solid #eee; */
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 24px;
+}
+
+.app-name-grid {
+  font-weight: 600;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.app-developer-grid {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.app-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 5px 0;
+  color: #666;
+}
+
+.stars {
+  color: #ffc107;
+}
+
+.get-btn {
+  background: #0070c9;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.get-btn:hover {
+  background: #005bb7;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .app-list {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .app-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .app-actions {
+    justify-content: center;
+  }
+  
+  .apps-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apps-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .app-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .install-btn {
+    width: 100%;
+  }
+}
+
+.BreadCrum{
+  display: flex;
+}
+
+.appDetails-btn-Breadcrum{
+  background-color: transparent;
+  color: #374151;
+}
+
+.appDetail-logo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.appDetails-disc-div{
+  flex-grow: 1;
+  min-width: 0;
+  padding: 10px;
+}
+
+.appDetails-name{
+  display: block;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.appDetails-developer{
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #007DFC;
+}
+
+.Divider{
+  background-color: #666;
+  width: 2px;
+  margin: 0px 10px;
+}
+
+.appDetail-image{
+  height: 500px;
+  object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.app-permission-other-div{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+
+}
+
+.app-details-section {
+  margin-bottom: 40px;
+  background: none;
+  border-radius: 12px;
+  padding: 20px;
+}

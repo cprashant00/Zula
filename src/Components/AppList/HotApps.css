@@ -1,0 +1,170 @@
+.hotapps-container {
+  display: flex;
+  
+  /* CHANGE: Prevent wrapping so cards stay on a single line */
+  flex-wrap: nowrap; 
+  
+  /* ADD: Allow horizontal scrolling when content overflows */
+  overflow-x: auto; 
+  
+  /* ADD: Optional - Hide the vertical scrollbar */
+  overflow-y: hidden;
+  
+  gap: 20px;
+  padding: 20px;
+  justify-content: flex-start;
+  
+  /* Optional: Hide scrollbar for a cleaner look */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.hotapps-container::-webkit-scrollbar {
+  display: none;
+}
+
+.hotapp-card {
+  /* ADD: Prevent cards from shrinking to fit the container */
+  flex-shrink: 0;
+  
+  min-width: 540px;
+  min-height: 296px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.hotapp-card:hover {
+  transform: translateY(-5px);
+}
+
+.hotapp-banner {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.app-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.hotapp-footer {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  color: #fff; /* white text */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.app-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.app-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.app-developer,
+.app-age,
+.purchase-type {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.install-btn {
+  background-color: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.install-btn:hover {
+  background-color: rgba(255,255,255,0.25);
+}
+
+.auth-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.auth-login {
+    border: 0.2px solid !important;
+  background: transparent;
+  color: #374151;
+}
+
+.auth-login:hover {
+  color: #2563eb;
+  background: #f3f4f6;
+}
+
+/* HotApps.css */
+
+.hot-apps-section {
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px; /* Space between heading and slider */
+}
+
+.hotapps-container {
+  /* Existing styles for horizontal slider */
+  display: flex;
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+  overflow-y: hidden;
+  gap: 20px;
+  /* Removed padding from here because the wrapper will handle it */
+  justify-content: flex-start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hotapps-container::-webkit-scrollbar {
+  display: none;
+}
+/* ... (rest of your CSS) ... */

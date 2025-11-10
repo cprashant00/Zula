@@ -1,0 +1,132 @@
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* The individual card container */
+.app-card {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  transition: transform 0.2s;
+}
+
+.app-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+/* *** KEY CONTAINER: HORIZONTAL FLEX LAYOUT *** */
+.app-image-div {
+    display: flex; /* Enable Flexbox for horizontal alignment */
+    /* THIS IS THE FIX: Vertically centers all children (logo, details, button) */
+    align-items: center; 
+    justify-content: space-between; 
+    column-gap: 16px; 
+    padding: 0; 
+}
+/* ****************************************** */
+
+
+.app-logo {
+  width: 56px; 
+  height: 56px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0; 
+}
+
+/* App Details Container (Name, Developer, Rating) */
+.app-disc-div {
+    flex-grow: 1; 
+    min-width: 0; 
+}
+
+.app-name {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap; 
+  overflow: hidden;    
+  text-overflow: ellipsis;
+}
+
+.app-developer {
+  font-size: 0.8em;
+  color: #777;
+  margin: 0;
+}
+
+.app-rating {
+  font-size: 0.9em;
+  color: #ffc107;
+  margin-top: 2px;
+}
+
+/* Button container */
+.app-btn-div {
+    flex-shrink: 0; /* Ensures the button doesn't shrink */
+    margin-left: 10px;
+}
+
+/* We need to use your existing button classes, but ensure they allow for auto-height */
+/* These styles should be loaded from your main CSS files (e.g., Header.css) */
+/* Adding them here ensures the appearance matches the Figma button (small, rounded) */
+
+.auth-btn {
+  /* Use padding to control the height of the button relative to the text */
+  padding: 6px 14px; /* Slightly smaller padding for a compact look */
+  border: none;
+  border-radius: 20px; /* Highly rounded corners */
+  font-size: 14px; /* Small font size */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  line-height: 1.2; /* Ensures vertical alignment inside the button padding */
+}
+
+/* Specific button color/style for the deal button (using auth-register as per your JSX) */
+.auth-register {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.auth-register:hover {
+  background: #374151;
+}
+
+.app-card-similar {
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  transition: transform 0.2s;
+}
+
+.app-image-div-similar {
+    display: flex; /* Enable Flexbox for horizontal alignment */
+    /* THIS IS THE FIX: Vertically centers all children (logo, details, button) */
+    align-items: center; 
+    justify-content: space-between; 
+    column-gap: 16px; 
+    padding: 0; 
+    width: max-content;
+}
+
+.app-disc-div-similar {
+    flex-grow: 1; 
+    min-width: 0; 
+    width: 140px;
+    text-align: center;
+}
+

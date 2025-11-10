@@ -1,0 +1,180 @@
+/* HeroSection.css */
+.hero-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  padding: 20px 0;
+  /* min-height: 60vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-container {
+  width: 100%;
+  max-width: 1350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  /* height: 500px; */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Center the image perfectly */
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slideshow animation for multiple images */
+.hero-image-wrapper.multiple-images .hero-image {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.7; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Navigation dots - VERY SMALL STYLING */
+.image-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+
+.dot {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 2px;
+}
+
+.dot.active {
+  background: white;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-image-wrapper {
+    height: 450px;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    min-height: 70vh;
+    padding: 30px 0;
+  }
+  
+  .hero-image-wrapper {
+    height: 400px;
+    max-width: 850px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 60vh;
+    padding: 20px 0;
+  }
+  
+  .hero-container {
+    padding: 0 1.5rem;
+  }
+  
+  .hero-image-wrapper {
+    height: 350px;
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 0 1rem;
+  }
+  
+  .image-dots {
+    bottom: 12px;
+    gap: 3px;
+  }
+  
+  .dot {
+    width: 2px;
+    height: 2px;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 50vh;
+    padding: 15px 0;
+  }
+  
+  .hero-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-image-wrapper {
+    height: 280px;
+    border-radius: 10px;
+  }
+  
+  .image-dots {
+    bottom: 10px;
+    gap: 2px;
+  }
+  
+  .dot {
+    width: 1.5px;
+    height: 1.5px;
+    padding: 2px;
+  }
+}
+
+/* For very large screens */
+@media (min-width: 1600px) {
+  .hero-image-wrapper {
+    height: 600px;
+    max-width: 1300px;
+  }
+}
