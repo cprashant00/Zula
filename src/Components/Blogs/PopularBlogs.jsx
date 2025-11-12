@@ -12,7 +12,7 @@ const PopularBlogs = () => {
       useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`${import.meta.env.BASE_URL}/BlogData.xlsx`);
+            const response = await fetch(`${import.meta.env.BASE_URL}BlogData.xlsx`);
             
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
