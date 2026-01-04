@@ -25,7 +25,7 @@ const AppDetail = () => {
         setLoading(true);
         setError(null);
 
-        const response = await fetch("/AppData.xlsx");
+        const response = await fetch(`${import.meta.env.BASE_URL}AppData.xlsx`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
